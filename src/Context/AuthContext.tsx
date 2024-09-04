@@ -21,7 +21,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Check authentication status on component mount
     const checkAuth = async () => {
       try {
-        const response = await fetch('https://todo-backend-theta-one.vercel.app/api/auth/status', {
+        const response = await fetch('https://todo-backend-nine-phi.vercel.app/api/auth/status', {
           credentials: 'include',
         });
         if (response.ok) {

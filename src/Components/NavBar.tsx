@@ -32,7 +32,7 @@ export default function NavBar() {
   const { user } = useUserContext();
 
   const handleLogin = () => {
-    window.location.href = "https://todo-backend-theta-one.vercel.app/api/auth/github";
+    window.location.href = "https://todo-backend-nine-phi.vercel.app/api/auth/github";
   };
 
   const drawerContent = (

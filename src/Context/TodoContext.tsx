@@ -33,7 +33,7 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   const fetchTodos = async () => {
     try {
       console.log("from fetchTodos", user?.githubId);
-      const response = await fetch(`https://todo-backend-theta-one.vercel.app/api/todos/${user?.githubId}`,
+      const response = await fetch(`https://todo-backend-nine-phi.vercel.app/api/todos/${user?.githubId}`,
       
         {
           credentials: "include",

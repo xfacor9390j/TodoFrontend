@@ -44,7 +44,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setError(null);
 
     try {
-      const response = await fetch('https://todo-backend-theta-one.vercel.app/api/auth/user', {
+      const response = await fetch('https://todo-backend-nine-phi.vercel.app/api/auth/user', {
         credentials: 'include',
       });
 
