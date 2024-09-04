@@ -64,9 +64,23 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       setIsLoading(false);
     }
   };
+  const requestStorageAccess = async () => {
+    try {
+      const hasAccess = await document.hasStorageAccess();
+      if (!hasAccess) {
+        await document.requestStorageAccess();
+        console.log('Storage access granted.');
+      } else {
+        console.log('Storage access already granted.');
+      }
+    } catch (error) {
+      console.error('Error requesting storage access:', error);
+    }
+  };
 
   useEffect(() => {
     fetchUserDetails();
+    requestStorageAccess();
   }, []);
 
   return (
