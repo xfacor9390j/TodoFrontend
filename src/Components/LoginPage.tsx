@@ -9,9 +9,9 @@ export default function LoginPage() {
             });
             console.log(response);
 
-            // if (response.redirected) {
-            //     window.location.href = response.url; // Redirect to GitHub for OAuth
-            // }
+            if (response.redirected) {
+                window.location.href = response.url; // Redirect to GitHub for OAuth
+            }
         } catch (error) {
             console.error("Error during login", error);
         }
